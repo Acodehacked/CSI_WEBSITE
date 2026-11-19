@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { aboutStory, pillars, values } from "@/app/_components/home/content";
+import {
+  MARK_HEIGHT,
+  MARK_PATHS,
+  MARK_WIDTH,
+} from "@/app/_components/home/csi-mark";
 import { CutText } from "@/app/_components/home/cut-text";
 import { LogoMark } from "@/app/_components/home/logo-mark";
 import { PageHero } from "@/app/_components/home/page-hero";
@@ -44,7 +49,11 @@ export default function AboutPage() {
           <SectionLabel text="(01) - Our story" />
           <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
             <RevealLines
-              lines={["Built on a campus", "in the hills of Palai,", "wired to a national network."]}
+              lines={[
+                "Built on a campus",
+                "in the hills of Palai,",
+                "wired to a national network.",
+              ]}
             />
           </h2>
         </div>
@@ -59,7 +68,9 @@ export default function AboutPage() {
         <div className="mt-[12vh] grid gap-8 text-[13.5px] leading-[1.8] text-white/55 md:grid-cols-12 md:gap-6">
           {aboutStory.map((paragraph, i) => (
             <Reveal
-              className={i === 0 ? "md:col-span-4 md:col-start-5" : "md:col-span-4"}
+              className={
+                i === 0 ? "md:col-span-4 md:col-start-5" : "md:col-span-4"
+              }
               delay={i * 0.12}
               key={paragraph.slice(0, 24)}
             >
@@ -125,7 +136,11 @@ export default function AboutPage() {
             </Reveal>
             <h2 className="mt-12 text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
               <RevealLines
-                lines={["Part of India's first", "and largest body of", "computer professionals."]}
+                lines={[
+                  "Part of India's first",
+                  "and largest body of",
+                  "computer professionals.",
+                ]}
               />
             </h2>
             <Reveal delay={0.15}>
@@ -170,21 +185,53 @@ export default function AboutPage() {
             <CutText lines={["Four things", "we hold on to."]} />
           </h2>
         </div>
-        <ol className="mt-[12vh] grid border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* A 1px gap over a hairline background draws every divider, so each
+            tile can carry the same padding on all sides. */}
+        <ol className="mt-[12vh] grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((value, i) => (
-            <li
-              className="border-b border-white/10 sm:odd:border-r lg:border-r lg:last:border-r-0"
-              key={value.title}
-            >
-              <Reveal className="flex h-full flex-col gap-14 py-8 pr-6 sm:px-6 lg:first:pl-0" delay={i * 0.08}>
-                <span className="font-mono text-[10px] tracking-[0.2em] text-white/40">
-                  {pad(i + 1)}
-                </span>
-                <div>
-                  <h3 className="text-[22px] font-light tracking-[-0.02em] text-white">
+            <li className="bg-[#050507]" key={value.title}>
+              <Reveal
+                className="group relative flex h-full min-h-[300px] flex-col justify-between gap-12 overflow-hidden p-6 md:p-8"
+                delay={i * 0.08}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-[#9cc2ff] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-1/3 -right-1/3 size-[90%] rounded-full bg-[radial-gradient(circle,rgba(98,104,255,0.2),transparent_65%)] opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                />
+
+                <div className="relative flex items-start justify-between">
+                  <span className="font-mono text-[10px] tracking-[0.2em] text-white/40 transition-colors duration-500 group-hover:text-[#9cc2ff]">
+                    {pad(i + 1)} / {pad(values.length)}
+                  </span>
+                  {/* This value's own triangle of the CSI mark */}
+                  <svg
+                    aria-hidden="true"
+                    className="w-9 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-rotate-12"
+                    viewBox={`-4 -4 ${MARK_WIDTH + 8} ${MARK_HEIGHT + 8}`}
+                  >
+                    {MARK_PATHS.map((d, k) => (
+                      <path
+                        className={
+                          k === i
+                            ? "fill-[#9cc2ff] transition-colors duration-500 group-hover:fill-white"
+                            : "fill-white/[0.06]"
+                        }
+                        d={d}
+                        key={d.slice(0, 12)}
+                      />
+                    ))}
+                  </svg>
+                </div>
+
+                <div className="relative">
+                  <h3 className="text-[24px] font-light tracking-[-0.02em] text-white">
                     {value.title}
                   </h3>
-                  <p className="mt-3 text-[12.5px] leading-[1.7] text-white/50">
+                  <p className="mt-3 max-w-[28ch] text-[13px] leading-[1.7] text-white/55">
                     {value.body}
                   </p>
                 </div>
@@ -230,7 +277,9 @@ export default function AboutPage() {
               href="/team"
             >
               Our team
-              <span className="transition-transform group-hover:translate-x-0.5">→</span>
+              <span className="transition-transform group-hover:translate-x-0.5">
+                →
+              </span>
             </Link>
             <Link
               className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-white uppercase transition-colors hover:border-white hover:bg-white hover:text-black"

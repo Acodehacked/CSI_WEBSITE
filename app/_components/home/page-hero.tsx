@@ -34,7 +34,10 @@ export function PageHero({
       className="relative flex min-h-[88svh] items-end overflow-hidden bg-[#020310]"
       ref={ref}
     >
-      <motion.div className="absolute inset-x-0 -top-[4%] h-[112%]" style={{ y: slatsY }}>
+      <motion.div
+        className="absolute inset-x-0 -top-[4%] h-[112%]"
+        style={{ y: slatsY }}
+      >
         <LightSlats className="h-full w-full" />
       </motion.div>
       <div

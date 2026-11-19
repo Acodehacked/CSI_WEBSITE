@@ -52,7 +52,10 @@ export function Closing() {
             <ul className="flex flex-wrap gap-x-5 gap-y-1 sm:justify-center">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link className="transition-colors hover:text-white" href={item.href}>
+                  <Link
+                    className="transition-colors hover:text-white"
+                    href={item.href}
+                  >
                     {item.label}
                   </Link>
                 </li>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { facts } from "./content";
 import { CountUp, Reveal, RevealLines } from "./reveal";
 import { ScrambleText } from "./scramble-text";
@@ -41,6 +42,17 @@ export function About() {
                 shipped. The only requirement is curiosity and a willingness to
                 show your work.
               </p>
+            </Reveal>
+            <Reveal className="sm:col-span-2" delay={0.2}>
+              <Link
+                className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] text-white/75 uppercase transition-colors hover:text-white"
+                href="/about"
+              >
+                More about us
+                <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  ↗
+                </span>
+              </Link>
             </Reveal>
           </div>
         </div>

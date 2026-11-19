@@ -24,7 +24,7 @@ const GLASS_MASK = {
   WebkitMaskSize: "76% auto",
 } as const;
 
-const HEADLINE = ["Where code", "finds its orbit"];
+const HEADLINE = ["Where Ideas", "Become Innovation."];
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -100,7 +100,11 @@ export function Hero() {
                     stroke="url(#hero-rim)"
                     strokeLinejoin="round"
                     strokeWidth={RIM / MARK.scale}
-                    transition={{ delay: 0.3 + i * 0.14, duration: 1.6, ease: EASE }}
+                    transition={{
+                      delay: 0.3 + i * 0.14,
+                      duration: 1.6,
+                      ease: EASE,
+                    }}
                   />
                 ))}
               </g>
@@ -121,7 +125,11 @@ export function Hero() {
                     animate={{ y: "0%" }}
                     className="block"
                     initial={{ y: "110%" }}
-                    transition={{ delay: 0.5 + i * 0.12, duration: 1.1, ease: EASE }}
+                    transition={{
+                      delay: 0.5 + i * 0.12,
+                      duration: 1.1,
+                      ease: EASE,
+                    }}
                   >
                     {line}
                   </motion.span>

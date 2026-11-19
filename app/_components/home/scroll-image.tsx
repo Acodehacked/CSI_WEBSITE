@@ -28,7 +28,10 @@ export function ScrollImage({
     target: ref,
   });
   const inset = useTransform(scrollYProgress, [0, 0.45], [14, 0]);
-  const clipPath = useTransform(inset, (v) => `inset(${v}% ${v}% ${v}% ${v}% round ${v * 1.2}px)`);
+  const clipPath = useTransform(
+    inset,
+    (v) => `inset(${v}% ${v}% ${v}% ${v}% round ${v * 1.2}px)`,
+  );
   const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
@@ -37,7 +40,10 @@ export function ScrollImage({
       ref={ref}
       style={{ clipPath }}
     >
-      <motion.div className="absolute inset-x-0 -top-[10%] h-[120%]" style={{ y }}>
+      <motion.div
+        className="absolute inset-x-0 -top-[10%] h-[120%]"
+        style={{ y }}
+      >
         <Image
           alt={alt}
           className="object-cover"

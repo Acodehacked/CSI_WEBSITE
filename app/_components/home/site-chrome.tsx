@@ -75,7 +75,10 @@ export function SiteChrome({ rail = true }: { rail?: boolean }) {
             Student Branch · Computer Society of India
           </p>
 
-          <nav aria-label="Primary" className="pointer-events-auto justify-self-end">
+          <nav
+            aria-label="Primary"
+            className="pointer-events-auto justify-self-end"
+          >
             <ul className="flex gap-5 font-mono text-[12px] uppercase tracking-[0.16em] md:gap-7">
               {nav.map((item) => {
                 const current = item.href === pathname;
@@ -104,42 +107,42 @@ export function SiteChrome({ rail = true }: { rail?: boolean }) {
       </header>
 
       {rail ? (
-      <aside
-        aria-label="Sections"
-        className="pointer-events-none fixed top-1/2 right-5 z-40 hidden -translate-y-1/2 text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] md:block md:right-8"
-      >
-        <ol className="flex flex-col items-end gap-2.5">
-          {sections.map((section, index) => {
-            const isActive = active === section.id;
-            return (
-              <li key={section.id}>
-                <a
-                  aria-current={isActive ? "true" : undefined}
-                  className="pointer-events-auto flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.18em]"
-                  href={`#${section.id}`}
-                >
-                  <span
-                    className={
-                      isActive
-                        ? "text-white transition-opacity"
-                        : "text-white/0 transition-opacity"
-                    }
+        <aside
+          aria-label="Sections"
+          className="pointer-events-none fixed top-1/2 right-5 z-40 hidden -translate-y-1/2 text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] md:block md:right-8"
+        >
+          <ol className="flex flex-col items-end gap-2.5">
+            {sections.map((section, index) => {
+              const isActive = active === section.id;
+              return (
+                <li key={section.id}>
+                  <a
+                    aria-current={isActive ? "true" : undefined}
+                    className="pointer-events-auto flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.18em]"
+                    href={`#${section.id}`}
                   >
-                    {String(index + 1).padStart(2, "0")} {section.label}
-                  </span>
-                  <span
-                    className={
-                      isActive
-                        ? "h-2 w-2 rotate-45 bg-white transition-all"
-                        : "h-1.5 w-1.5 rotate-45 border border-white/50 transition-all"
-                    }
-                  />
-                </a>
-              </li>
-            );
-          })}
-        </ol>
-      </aside>
+                    <span
+                      className={
+                        isActive
+                          ? "text-white transition-opacity"
+                          : "text-white/0 transition-opacity"
+                      }
+                    >
+                      {String(index + 1).padStart(2, "0")} {section.label}
+                    </span>
+                    <span
+                      className={
+                        isActive
+                          ? "h-2 w-2 rotate-45 bg-white transition-all"
+                          : "h-1.5 w-1.5 rotate-45 border border-white/50 transition-all"
+                      }
+                    />
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </aside>
       ) : null}
 
       <div className="pointer-events-none fixed bottom-5 left-5 z-40 font-mono text-[9px] uppercase tracking-[0.18em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] md:bottom-6 md:left-8">

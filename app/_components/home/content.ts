@@ -112,6 +112,7 @@ export const programmes = [
   },
 ];
 
+/** One step per triangle of the CSI mark, which assembles as you scroll. */
 export const steps = [
   {
     title: "Register",
@@ -125,7 +126,14 @@ export const steps = [
     title: "Build & ship",
     body: "Show up to sessions, team up on a project and put it in front of people. That is the whole curriculum.",
   },
+  {
+    title: "Launch",
+    body: "Four pieces, one mark. You're part of the branch now — the next session has a seat with your name on it.",
+  },
 ];
+
+// TODO(branch): point this at the real membership / registration form.
+export const joinHref = "/team";
 
 export const address = [
   "St. Joseph's College of Engineering and Technology",
@@ -190,10 +198,22 @@ export const pillars = [
 ];
 
 export const values = [
-  { body: "Ask why, then go find out. Every good project starts as a question.", title: "Curiosity" },
-  { body: "Care about the details. Ship work you would be proud to show.", title: "Craft" },
-  { body: "Learn in the open, teach what you know, and lift the people beside you.", title: "Community" },
-  { body: "Build things that are useful to someone beyond the grade.", title: "Contribution" },
+  {
+    body: "Ask why, then go find out. Every good project starts as a question.",
+    title: "Curiosity",
+  },
+  {
+    body: "Care about the details. Ship work you would be proud to show.",
+    title: "Craft",
+  },
+  {
+    body: "Learn in the open, teach what you know, and lift the people beside you.",
+    title: "Community",
+  },
+  {
+    body: "Build things that are useful to someone beyond the grade.",
+    title: "Contribution",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
