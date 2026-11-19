@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, sections } from "./content";
 import { LogoMark } from "./logo-mark";
+import { MobileMenu } from "./mobile-menu";
 
 /**
  * Fixed header, page progress hairline and scroll readout. The right-hand
@@ -52,7 +53,7 @@ export function SiteChrome({ rail = true }: { rail?: boolean }) {
         style={{ scaleX: progress }}
       />
 
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-40 text-white">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 text-white">
         {/* Black fade behind the bar so it reads over bright sections */}
         <div
           aria-hidden="true"
@@ -66,27 +67,25 @@ export function SiteChrome({ rail = true }: { rail?: boolean }) {
             href="/"
           >
             <LogoMark className="size-9" priority />
-            <span className="text-[15px] font-medium tracking-tight">
+            <span className="text-[16px] md:text-[15px] font-medium tracking-tight">
               CSI SJCET
             </span>
           </Link>
 
-          <p className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white/70 lg:block">
+          <p className="hidden font-mono text-[12.5px] md:text-[11px] uppercase tracking-[0.2em] text-white/70 lg:block">
             Student Branch · Computer Society of India
           </p>
 
+          <MobileMenu />
           <nav
             aria-label="Primary"
-            className="pointer-events-auto justify-self-end"
+            className="pointer-events-auto hidden justify-self-end md:block"
           >
-            <ul className="flex gap-5 font-mono text-[12px] uppercase tracking-[0.16em] md:gap-7">
+            <ul className="flex gap-5 font-mono text-[15px] md:text-[12px] uppercase tracking-[0.16em] md:gap-7">
               {nav.map((item) => {
                 const current = item.href === pathname;
                 return (
-                  <li
-                    className={item.href === "/#join" ? "" : "hidden md:block"}
-                    key={item.href}
-                  >
+                  <li key={item.href}>
                     <Link
                       aria-current={current ? "page" : undefined}
                       className={
@@ -118,7 +117,7 @@ export function SiteChrome({ rail = true }: { rail?: boolean }) {
                 <li key={section.id}>
                   <a
                     aria-current={isActive ? "true" : undefined}
-                    className="pointer-events-auto flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.18em]"
+                    className="pointer-events-auto flex items-center gap-3 font-mono text-[11px] md:text-[9px] uppercase tracking-[0.18em]"
                     href={`#${section.id}`}
                   >
                     <span
@@ -145,7 +144,7 @@ export function SiteChrome({ rail = true }: { rail?: boolean }) {
         </aside>
       ) : null}
 
-      <div className="pointer-events-none fixed bottom-5 left-5 z-40 font-mono text-[9px] uppercase tracking-[0.18em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] md:bottom-6 md:left-8">
+      <div className="pointer-events-none fixed bottom-5 left-5 z-40 font-mono text-[11px] md:text-[9px] uppercase tracking-[0.18em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] md:bottom-6 md:left-8">
         SCR <motion.span>{percent}</motion.span>
       </div>
     </>

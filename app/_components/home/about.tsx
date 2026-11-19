@@ -10,12 +10,12 @@ export function About() {
       id="about"
     >
       <div className="grid gap-12 md:grid-cols-12 md:gap-6">
-        <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase md:col-span-3">
+        <p className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase md:col-span-3">
           <ScrambleText text="(04) - About" />
         </p>
 
         <div className="md:col-span-8 md:col-start-5">
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
             <RevealLines
               lines={[
                 "A launchpad for students",
@@ -25,7 +25,7 @@ export function About() {
             />
           </h2>
 
-          <div className="mt-20 grid gap-8 text-[13px] leading-[1.75] text-white/50 sm:grid-cols-2 md:mt-28 md:gap-12">
+          <div className="mt-20 grid gap-8 text-[15px] md:text-[13px] leading-[1.75] text-white/50 sm:grid-cols-2 md:mt-28 md:gap-12">
             <Reveal>
               <p>
                 The CSI student branch at SJCET brings together students from
@@ -45,7 +45,7 @@ export function About() {
             </Reveal>
             <Reveal className="sm:col-span-2" delay={0.2}>
               <Link
-                className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] text-white/75 uppercase transition-colors hover:text-white"
+                className="group inline-flex items-center gap-2 font-mono text-[12px] md:text-[10px] tracking-[0.18em] text-white/75 uppercase transition-colors hover:text-white"
                 href="/about"
               >
                 More about us
@@ -65,7 +65,7 @@ export function About() {
             delay={i * 0.08}
             key={fact.label}
           >
-            <dt className="mt-4 font-mono text-[9px] leading-relaxed tracking-[0.18em] text-white/40 uppercase">
+            <dt className="mt-4 font-mono text-[11px] md:text-[9px] leading-relaxed tracking-[0.18em] text-white/40 uppercase">
               {fact.label}
             </dt>
             <dd className="text-[clamp(2.2rem,4vw,3.4rem)] leading-none font-extralight tracking-[-0.04em] text-white">

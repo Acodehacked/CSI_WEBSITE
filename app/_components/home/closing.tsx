@@ -24,11 +24,11 @@ export function Closing() {
       >
         <div className="flex h-full flex-col justify-between px-5 pt-28 pb-6 md:px-12 md:pb-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-            <p className="max-w-[22ch] text-[clamp(1.3rem,2.2vw,1.9rem)] leading-[1.1] font-light tracking-[-0.03em] text-white">
+            <p className="max-w-[22ch] text-[clamp(1.6rem,2.2vw,1.9rem)] leading-[1.1] font-light tracking-[-0.03em] text-white">
               Ready to build something with us?
             </p>
             <Link
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
+              className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
               href="/#join"
             >
               Become a member
@@ -38,7 +38,7 @@ export function Closing() {
             </Link>
           </div>
 
-          <div className="grid gap-8 border-t border-white/15 pt-6 font-mono text-[9px] leading-[1.8] tracking-[0.16em] text-white/50 uppercase sm:grid-cols-3">
+          <div className="grid gap-8 border-t border-white/15 pt-6 font-mono text-[11px] md:text-[9px] leading-[1.8] tracking-[0.16em] text-white/50 uppercase sm:grid-cols-3">
             <div className="flex items-start gap-3">
               <LogoMark className="size-10 shrink-0" />
               <address className="not-italic">

@@ -59,7 +59,7 @@ function MemberCard({ index, member }: { index: number; member: TeamMember }) {
         ) : (
           <Placeholder index={index} />
         )}
-        <div className="absolute inset-x-0 top-0 flex justify-between p-3 font-mono text-[9px] tracking-[0.2em] text-white/80 uppercase">
+        <div className="absolute inset-x-0 top-0 flex justify-between p-3 font-mono text-[11px] md:text-[9px] tracking-[0.2em] text-white/80 uppercase">
           <span>M/{pad(index + 1)}</span>
           <span className="rounded-sm border border-white/30 bg-black/30 px-1.5 py-0.5 backdrop-blur-sm">
             {member.group}
@@ -67,10 +67,10 @@ function MemberCard({ index, member }: { index: number; member: TeamMember }) {
         </div>
       </div>
       <div className="mt-4">
-        <p className="font-mono text-[10px] tracking-[0.18em] text-[#9cc2ff] uppercase">
+        <p className="font-mono text-[12px] md:text-[10px] tracking-[0.18em] text-[#9cc2ff] uppercase">
           {member.role}
         </p>
-        <h3 className="mt-2 text-[18px] leading-tight font-light tracking-[-0.02em] text-white">
+        <h3 className="mt-2 text-[21px] md:text-[18px] leading-tight font-light tracking-[-0.02em] text-white">
           {member.name}
           {member.href ? (
             <span
@@ -122,8 +122,8 @@ export function TeamGrid() {
               aria-pressed={active}
               className={
                 active
-                  ? "rounded-full bg-white px-3.5 py-1.5 font-mono text-[10px] tracking-[0.16em] text-black uppercase"
-                  : "rounded-full border border-white/20 px-3.5 py-1.5 font-mono text-[10px] tracking-[0.16em] text-white/70 uppercase transition-colors hover:border-white/60 hover:text-white"
+                  ? "rounded-full bg-white px-3.5 py-1.5 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-black uppercase"
+                  : "rounded-full border border-white/20 px-3.5 py-1.5 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-white/70 uppercase transition-colors hover:border-white/60 hover:text-white"
               }
               key={option}
               onClick={() => setFilter(option)}

@@ -87,7 +87,10 @@ export function Starfield({
       canvas.width = Math.round(width * dpr);
       canvas.height = Math.round(height * dpr);
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const target = Math.min(MAX_STARS, Math.round(width * height * STAR_DENSITY));
+      const target = Math.min(
+        MAX_STARS,
+        Math.round(width * height * STAR_DENSITY),
+      );
       if (stars.length > target) {
         stars = stars.slice(0, target);
       }
@@ -131,7 +134,8 @@ export function Starfield({
         }
 
         const nearness = 1 - star.z / DEPTH;
-        const twinkle = 0.55 + 0.45 * Math.sin(time * star.twinkle + star.phase);
+        const twinkle =
+          0.55 + 0.45 * Math.sin(time * star.twinkle + star.phase);
         const alpha = Math.min(1, (0.15 + nearness * 1.1) * twinkle);
         const radius = star.size * (0.4 + nearness * 1.4);
 
@@ -168,7 +172,9 @@ export function Starfield({
           ttl: 0.6 + Math.random() * 0.6,
           vx: Math.cos(dir) * velocity * (fromLeft ? 1 : -1),
           vy: Math.abs(Math.sin(dir)) * velocity,
-          x: fromLeft ? Math.random() * width * 0.5 : width * (0.5 + Math.random() * 0.5),
+          x: fromLeft
+            ? Math.random() * width * 0.5
+            : width * (0.5 + Math.random() * 0.5),
           y: Math.random() * height * 0.4,
         });
       }
@@ -190,7 +196,10 @@ export function Starfield({
           m.x - m.vx * tail,
           m.y - m.vy * tail,
         );
-        gradient.addColorStop(0, `rgba(255,255,255,${(0.9 * fade).toFixed(3)})`);
+        gradient.addColorStop(
+          0,
+          `rgba(255,255,255,${(0.9 * fade).toFixed(3)})`,
+        );
         gradient.addColorStop(1, "rgba(160,200,255,0)");
         context.strokeStyle = gradient;
         context.lineWidth = 1.3;
@@ -271,7 +280,5 @@ export function Starfield({
     };
   }, [reduceMotion, warp]);
 
-  return (
-    <canvas aria-hidden="true" className={className} ref={canvasRef} />
-  );
+  return <canvas aria-hidden="true" className={className} ref={canvasRef} />;
 }

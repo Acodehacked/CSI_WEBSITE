@@ -73,14 +73,14 @@ export function Tracks() {
       <div className="sticky top-0 flex h-svh flex-col justify-center gap-12 overflow-hidden">
         <div className="flex items-end justify-between px-5 md:px-12">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+            <p className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase">
               <ScrambleText text="(05) - Tracks" />
             </p>
-            <h2 className="mt-5 text-[clamp(1.5rem,2.6vw,2.2rem)] leading-[1.05] font-light tracking-[-0.035em] text-white">
+            <h2 className="mt-5 text-[clamp(1.9rem,2.6vw,2.2rem)] leading-[1.05] font-light tracking-[-0.035em] text-white">
               Six tracks, one orbit.
             </h2>
           </div>
-          <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+          <p className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase">
             <motion.span className="text-white">{counter}</motion.span> /{" "}
             {String(tracks.length).padStart(2, "0")}
           </p>
@@ -96,7 +96,7 @@ export function Tracks() {
               className="group relative flex h-[min(60vh,500px)] w-[min(80vw,360px)] shrink-0 flex-col justify-between overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.035] to-transparent p-6 transition-colors duration-500 hover:border-white/30"
               key={track.title}
             >
-              <div className="flex items-start justify-between font-mono text-[9px] tracking-[0.2em] text-white/40 uppercase">
+              <div className="flex items-start justify-between font-mono text-[11px] md:text-[9px] tracking-[0.2em] text-white/40 uppercase">
                 <span>T/{String(i + 1).padStart(2, "0")}</span>
                 <span>{track.tags[0]}</span>
               </div>
@@ -106,16 +106,16 @@ export function Tracks() {
               </div>
 
               <div>
-                <h3 className="text-[22px] leading-tight font-light tracking-[-0.02em] text-white">
+                <h3 className="text-[24px] md:text-[22px] leading-tight font-light tracking-[-0.02em] text-white">
                   {track.title}
                 </h3>
-                <p className="mt-3 text-[12px] leading-[1.7] text-white/50">
+                <p className="mt-3 text-[15px] md:text-[12px] leading-[1.7] text-white/50">
                   {track.body}
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-1.5">
                   {track.tags.map((tag) => (
                     <li
-                      className="border border-white/15 px-2 py-1 font-mono text-[8.5px] tracking-[0.16em] text-white/60 uppercase"
+                      className="border border-white/15 px-2 py-1 font-mono text-[10.5px] md:text-[8.5px] tracking-[0.16em] text-white/60 uppercase"
                       key={tag}
                     >
                       {tag}

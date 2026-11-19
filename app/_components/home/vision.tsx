@@ -91,7 +91,7 @@ export function Vision() {
           />
 
           <div className="absolute inset-0 flex items-center justify-center px-6">
-            <p className="max-w-[24ch] text-center text-[clamp(1.25rem,2.5vw,2.25rem)] leading-[1.12] font-light tracking-[-0.03em] text-white">
+            <p className="max-w-[24ch] text-center text-[clamp(1.6rem,2.5vw,2.25rem)] leading-[1.12] font-light tracking-[-0.03em] text-white">
               {WORDS.map((word, i) => (
                 <Word
                   index={i}
@@ -108,7 +108,7 @@ export function Vision() {
             style={{ opacity: chromeOpacity }}
           >
             <a
-              className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 font-mono text-[9px] tracking-[0.18em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 font-mono text-[11px] md:text-[9px] tracking-[0.18em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
               href="#join"
             >
               Join us
@@ -117,7 +117,7 @@ export function Vision() {
           </motion.div>
 
           <motion.p
-            className="absolute right-5 bottom-6 hidden items-center gap-2 font-mono text-[8px] tracking-[0.18em] text-white/60 uppercase md:right-8 md:flex md:text-[9px]"
+            className="absolute right-5 bottom-6 hidden items-center gap-2 font-mono text-[10px] tracking-[0.18em] text-white/60 uppercase md:right-8 md:flex md:text-[9px]"
             style={{ opacity: chromeOpacity }}
           >
             <span className="size-1.5 rounded-full border border-white/70" />

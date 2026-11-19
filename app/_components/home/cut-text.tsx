@@ -53,8 +53,10 @@ export function CutText({
         let target = 0;
         if (near) {
           const rect = glyph.getBoundingClientRect();
-          const dx = (pointer.x - (rect.left + rect.width / 2)) / (fontSize * SPREAD);
-          const dy = (pointer.y - (rect.top + rect.height / 2)) / (fontSize * 1.2);
+          const dx =
+            (pointer.x - (rect.left + rect.width / 2)) / (fontSize * SPREAD);
+          const dy =
+            (pointer.y - (rect.top + rect.height / 2)) / (fontSize * 1.2);
           target = fontSize * SPLIT * Math.exp(-(dx * dx) - dy * dy);
         }
         const next = openings[i] + (target - openings[i]) * EASING;

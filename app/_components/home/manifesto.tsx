@@ -76,7 +76,7 @@ export function Manifesto() {
         </div>
 
         <motion.p
-          className="max-w-[46ch] text-center text-[12px] leading-relaxed text-white/45"
+          className="max-w-[46ch] text-center text-[15px] md:text-[12px] leading-relaxed text-white/45"
           style={{ opacity: note, y: noteY }}
         >
           A student-run chapter of the Computer Society of India - the

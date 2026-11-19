@@ -28,7 +28,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
 
 function SectionLabel({ text }: { text: string }) {
   return (
-    <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase md:col-span-3">
+    <p className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase md:col-span-3">
       <ScrambleText text={text} />
     </p>
   );
@@ -47,7 +47,7 @@ export default function AboutPage() {
       <section className="bg-[#050507] px-5 py-[22vh] md:px-12">
         <div className="grid gap-12 md:grid-cols-12 md:gap-6">
           <SectionLabel text="(01) - Our story" />
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
             <RevealLines
               lines={[
                 "Built on a campus",
@@ -65,7 +65,7 @@ export default function AboutPage() {
           src={campus}
         />
 
-        <div className="mt-[12vh] grid gap-8 text-[13.5px] leading-[1.8] text-white/55 md:grid-cols-12 md:gap-6">
+        <div className="mt-[12vh] grid gap-8 text-[15.5px] md:text-[13.5px] leading-[1.8] text-white/55 md:grid-cols-12 md:gap-6">
           {aboutStory.map((paragraph, i) => (
             <Reveal
               className={
@@ -84,7 +84,7 @@ export default function AboutPage() {
       <section className="bg-[#050507] px-5 pb-[22vh] md:px-12">
         <div className="grid gap-12 md:grid-cols-12 md:gap-6">
           <SectionLabel text="(02) - Purpose" />
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
             <CutText lines={["Why we", "do this."]} />
           </h2>
         </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   className="pointer-events-none absolute -top-1/2 -right-1/4 size-[120%] rounded-full bg-[radial-gradient(circle,rgba(98,104,255,0.22),transparent_60%)] opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                 />
                 <div className="relative flex items-center justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                  <span className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase">
                     {pad(i + 1)} / {pillar.label}
                   </span>
                   <Image
@@ -110,7 +110,7 @@ export default function AboutPage() {
                     src={pillar.icon}
                   />
                 </div>
-                <p className="relative max-w-[30ch] text-[clamp(1.2rem,1.8vw,1.6rem)] leading-[1.3] font-light tracking-[-0.02em] text-white">
+                <p className="relative max-w-[30ch] text-[clamp(1.4rem,1.8vw,1.6rem)] leading-[1.3] font-light tracking-[-0.02em] text-white">
                   {pillar.body}
                 </p>
               </Reveal>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 className="size-24 md:size-28"
               />
             </Reveal>
-            <h2 className="mt-12 text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
+            <h2 className="mt-12 text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
               <RevealLines
                 lines={[
                   "Part of India's first",
@@ -144,7 +144,7 @@ export default function AboutPage() {
               />
             </h2>
             <Reveal delay={0.15}>
-              <p className="mt-8 max-w-[48ch] text-[13.5px] leading-[1.8] text-white/55">
+              <p className="mt-8 max-w-[48ch] text-[15.5px] md:text-[13.5px] leading-[1.8] text-white/55">
                 The Computer Society of India brings together IT professionals,
                 academics and students through chapters and student branches
                 across the country. Its motto, written on every seal, is a wish
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
             <dl className="mt-16 grid grid-cols-2 border-t border-white/10">
               <Reveal className="flex flex-col-reverse border-r border-white/10 py-8 pr-6">
-                <dt className="mt-4 font-mono text-[9px] tracking-[0.18em] text-white/40 uppercase">
+                <dt className="mt-4 font-mono text-[11px] md:text-[9px] tracking-[0.18em] text-white/40 uppercase">
                   Society founded
                 </dt>
                 <dd className="text-[clamp(2.2rem,4vw,3.4rem)] leading-none font-extralight tracking-[-0.04em] text-white">
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 </dd>
               </Reveal>
               <Reveal className="flex flex-col-reverse py-8 pl-6" delay={0.1}>
-                <dt className="mt-4 font-mono text-[9px] tracking-[0.18em] text-white/40 uppercase">
+                <dt className="mt-4 font-mono text-[11px] md:text-[9px] tracking-[0.18em] text-white/40 uppercase">
                   Motto · May all be happy
                 </dt>
                 <dd
@@ -181,7 +181,7 @@ export default function AboutPage() {
       <section className="bg-[#050507] px-5 py-[22vh] md:px-12">
         <div className="grid gap-12 md:grid-cols-12 md:gap-6">
           <SectionLabel text="(04) - Values" />
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
             <CutText lines={["Four things", "we hold on to."]} />
           </h2>
         </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 />
 
                 <div className="relative flex items-start justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.2em] text-white/40 transition-colors duration-500 group-hover:text-[#9cc2ff]">
+                  <span className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 transition-colors duration-500 group-hover:text-[#9cc2ff]">
                     {pad(i + 1)} / {pad(values.length)}
                   </span>
                   {/* This value's own triangle of the CSI mark */}
@@ -228,10 +228,10 @@ export default function AboutPage() {
                 </div>
 
                 <div className="relative">
-                  <h3 className="text-[24px] font-light tracking-[-0.02em] text-white">
+                  <h3 className="text-[26px] md:text-[24px] font-light tracking-[-0.02em] text-white">
                     {value.title}
                   </h3>
-                  <p className="mt-3 max-w-[28ch] text-[13px] leading-[1.7] text-white/55">
+                  <p className="mt-3 max-w-[28ch] text-[15px] md:text-[13px] leading-[1.7] text-white/55">
                     {value.body}
                   </p>
                 </div>
@@ -245,7 +245,7 @@ export default function AboutPage() {
       <section className="bg-[#050507] px-5 pb-[22vh] md:px-12">
         <div className="grid gap-12 md:grid-cols-12 md:gap-6">
           <SectionLabel text="(05) - In the room" />
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white md:col-span-8 md:col-start-5">
             <RevealLines lines={["Where the work", "actually happens."]} />
           </h2>
         </div>
@@ -268,12 +268,12 @@ export default function AboutPage() {
       {/* Next */}
       <section className="border-t border-white/10 bg-[#050507] px-5 py-[16vh] md:px-12">
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
             <CutText lines={["Meet the people", "behind the branch."]} />
           </h2>
           <div className="flex flex-wrap gap-3">
             <Link
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
+              className="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
               href="/team"
             >
               Our team
@@ -282,7 +282,7 @@ export default function AboutPage() {
               </span>
             </Link>
             <Link
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-white uppercase transition-colors hover:border-white hover:bg-white hover:text-black"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-white uppercase transition-colors hover:border-white hover:bg-white hover:text-black"
               href="/#join"
             >
               Join the branch

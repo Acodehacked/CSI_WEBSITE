@@ -129,8 +129,10 @@ export function LightSlats({ className }: { className?: string }) {
 
         ctx.globalCompositeOperation = "lighter";
         for (const glow of slat.glows) {
-          const x = width * (0.5 + 0.55 * Math.sin(t * glow.speed + glow.phase));
-          const pulse = 0.75 + 0.25 * Math.sin(t * glow.speed * 2.3 + glow.phase);
+          const x =
+            width * (0.5 + 0.55 * Math.sin(t * glow.speed + glow.phase));
+          const pulse =
+            0.75 + 0.25 * Math.sin(t * glow.speed * 2.3 + glow.phase);
           paintGlow(
             ctx,
             x,
@@ -140,7 +142,14 @@ export function LightSlats({ className }: { className?: string }) {
             glow.strength * pulse * depth * 0.8,
           );
         }
-        paintGlow(ctx, sweepX, sweepY, width * 0.42, height * 0.38, 0.32 * depth);
+        paintGlow(
+          ctx,
+          sweepX,
+          sweepY,
+          width * 0.42,
+          height * 0.38,
+          0.32 * depth,
+        );
         if (pointer.active > 0.01) {
           paintGlow(
             ctx,

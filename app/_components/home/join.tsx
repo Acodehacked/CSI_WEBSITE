@@ -136,15 +136,15 @@ function StepRow({
         />
       </div>
       <div className="flex items-baseline gap-5">
-        <span className="font-mono text-[10px] tracking-[0.2em] text-white/50">
+        <span className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/50">
           {pad(index + 1)}
         </span>
         <div>
-          <h3 className="text-[18px] leading-tight font-light tracking-[-0.02em] text-white">
+          <h3 className="text-[21px] md:text-[18px] leading-tight font-light tracking-[-0.02em] text-white">
             {title}
           </h3>
           <motion.p
-            className="mt-2 max-w-[40ch] overflow-hidden text-[12.5px] leading-[1.65] text-white/55"
+            className="mt-2 max-w-[40ch] overflow-hidden text-[15px] md:text-[12.5px] leading-[1.65] text-white/55"
             style={{ height: bodyHeight, opacity: bodyOpacity }}
           >
             {body}
@@ -226,14 +226,14 @@ export function Join() {
           {/* Copy and steps */}
           <div className="flex flex-col justify-between md:col-span-5 lg:col-span-4">
             <div>
-              <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.2em] text-white/50 uppercase">
+              <div className="flex items-center justify-between font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/50 uppercase">
                 <ScrambleText text="(08) - Join" />
                 <span>
                   <motion.span className="text-white">{counter}</motion.span> /{" "}
                   {pad(MARK_PATHS.length)}
                 </span>
               </div>
-              <h2 className="mt-6 text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.06] font-light tracking-[-0.035em] text-white md:mt-10">
+              <h2 className="mt-6 text-[clamp(2rem,3vw,2.6rem)] leading-[1.06] font-light tracking-[-0.035em] text-white md:mt-10">
                 <CutText lines={["Four pieces.", "One launchpad."]} />
               </h2>
             </div>
@@ -314,7 +314,7 @@ export function Join() {
               style={{ opacity: cta, y: ctaY }}
             >
               <Link
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-mono text-[11px] tracking-[0.16em] text-black uppercase shadow-[0_0_40px_rgba(156,194,255,0.5)] transition-colors hover:bg-[#bcd6ff]"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-mono text-[12.5px] md:text-[11px] tracking-[0.16em] text-black uppercase shadow-[0_0_40px_rgba(156,194,255,0.5)] transition-colors hover:bg-[#bcd6ff]"
                 href={joinHref}
               >
                 Become a member
@@ -323,7 +323,7 @@ export function Join() {
                 </span>
               </Link>
               <Link
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-black/20 px-5 py-2.5 font-mono text-[11px] tracking-[0.16em] text-white uppercase backdrop-blur-sm transition-colors hover:border-white hover:bg-white hover:text-black"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-black/20 px-5 py-2.5 font-mono text-[12.5px] md:text-[11px] tracking-[0.16em] text-white uppercase backdrop-blur-sm transition-colors hover:border-white hover:bg-white hover:text-black"
                 href="/about"
               >
                 About us
@@ -359,10 +359,10 @@ function MobileStep({
       className="absolute inset-x-0 bottom-0 flex items-baseline justify-center gap-3 text-center"
       style={{ opacity }}
     >
-      <span className="font-mono text-[10px] tracking-[0.2em] text-[#9cc2ff]">
+      <span className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-[#9cc2ff]">
         {pad(index + 1)}
       </span>
-      <span className="text-[18px] font-light tracking-[-0.02em] text-white">
+      <span className="text-[21px] md:text-[18px] font-light tracking-[-0.02em] text-white">
         {title}
       </span>
     </motion.li>

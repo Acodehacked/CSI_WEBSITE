@@ -54,7 +54,7 @@ export function PageHero({
         className="relative z-10 grid w-full gap-10 px-5 pt-40 pb-[12vh] md:grid-cols-12 md:gap-6 md:px-12"
         style={{ y: copyY }}
       >
-        <p className="font-mono text-[10px] tracking-[0.2em] text-white/60 uppercase md:col-span-3">
+        <p className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/60 uppercase md:col-span-3">
           <ScrambleText text={label} />
         </p>
         <div className="md:col-span-8 md:col-start-5">
@@ -63,7 +63,7 @@ export function PageHero({
           </h1>
           <motion.p
             animate={{ opacity: 1, y: 0 }}
-            className="mt-10 max-w-[48ch] text-[14px] leading-[1.75] text-white/65"
+            className="mt-10 max-w-[48ch] text-[16px] md:text-[14px] leading-[1.75] text-white/65"
             initial={{ opacity: 0, y: 16 }}
             transition={{ delay: 0.5, duration: 1, ease: EASE }}
           >

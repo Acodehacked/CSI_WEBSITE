@@ -34,7 +34,7 @@ export default function TeamPage() {
             sizes="100vw"
             src={groupPhoto}
           />
-          <figcaption className="mt-5 flex justify-between font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+          <figcaption className="mt-5 flex justify-between font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase">
             <span>The branch, together</span>
             <span>SJCET · Palai</span>
           </figcaption>
@@ -44,15 +44,15 @@ export default function TeamPage() {
       {/* Roster */}
       <section className="bg-[#050507] px-5 py-[22vh] md:px-12">
         <div className="grid gap-12 md:grid-cols-12 md:gap-6">
-          <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase md:col-span-3">
+          <p className="font-mono text-[12px] md:text-[10px] tracking-[0.2em] text-white/40 uppercase md:col-span-3">
             <ScrambleText text="(01) - Roster" />
           </p>
           <div className="md:col-span-8 md:col-start-5">
-            <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
+            <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
               <CutText lines={["Faces of", "this year's crew."]} />
             </h2>
             <Reveal delay={0.15}>
-              <p className="mt-8 max-w-[46ch] text-[13.5px] leading-[1.8] text-white/55">
+              <p className="mt-8 max-w-[46ch] text-[15.5px] md:text-[13.5px] leading-[1.8] text-white/55">
                 Filter by group to see who guides the branch, who runs it, and
                 who leads each of its tracks.
               </p>
@@ -72,12 +72,12 @@ export default function TeamPage() {
           className="pointer-events-none absolute -bottom-1/3 left-1/2 h-[70vmin] w-[130vmin] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(60,70,200,0.28),transparent_65%)] blur-2xl"
         />
         <div className="relative flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <h2 className="text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
+          <h2 className="text-[clamp(2rem,3vw,2.6rem)] leading-[1.08] font-light tracking-[-0.035em] text-white">
             <RevealLines lines={["Want your name", "on this page?"]} />
           </h2>
           <div className="flex flex-wrap gap-3">
             <Link
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
+              className="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff]"
               href="/#join"
             >
               Join the branch
@@ -86,7 +86,7 @@ export default function TeamPage() {
               </span>
             </Link>
             <Link
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-white uppercase transition-colors hover:border-white hover:bg-white hover:text-black"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-white uppercase transition-colors hover:border-white hover:bg-white hover:text-black"
               href="/about"
             >
               About us

@@ -139,7 +139,7 @@ export function Hero() {
 
             <motion.a
               animate={{ opacity: 1, x: 0 }}
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff] md:mr-[14vw]"
+              className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 font-mono text-[12px] md:text-[10px] tracking-[0.16em] text-black uppercase transition-colors hover:bg-[#bcd6ff] md:mr-[14vw]"
               href="#join"
               initial={{ opacity: 0, x: 24 }}
               transition={{ delay: 1, duration: 1, ease: EASE }}
@@ -152,7 +152,7 @@ export function Hero() {
           </div>
 
           <div className="flex items-end justify-center">
-            <p className="max-w-[34ch] text-center font-mono text-[9px] leading-[1.7] tracking-[0.18em] text-white/70 uppercase md:text-[10px]">
+            <p className="max-w-[34ch] text-center font-mono text-[11px] leading-[1.7] tracking-[0.18em] text-white/70 uppercase md:text-[10px]">
               <ScrambleText
                 delay={0.8}
                 text="CSI SJCET is the student branch of the Computer Society of India at St. Joseph's, Palai"
